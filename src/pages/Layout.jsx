@@ -1,13 +1,15 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Layout = ({children}) => {
+import { Outlet } from "react-router-dom";
+
+const Layout = () => {
     return ( 
         <div>
             {/* COMPONENTE DO CABEÇALHO */}
             <Header />
             {/* CONTEÚDO DINÂMICO DA PÁGINA */}
-            {children}
+            <Outlet />
             {/* COMPONENTE DO RODAPÉ */}
             <Footer />
         </div>
