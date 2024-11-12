@@ -1,7 +1,9 @@
 import Layout from './pages/Layout';
-import './App.css'
-/* ARQUIVOS BOOTSTRAP */
+//ARQUIVOS BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+//CSS
+import './App.css'
 
 function App() {
   

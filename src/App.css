@@ -1,5 +1,4 @@
-
-:root{
+:root {
   /* CORES */
   --primary: #C92071;
   --secondary: #B5B6F2;
@@ -16,4 +15,20 @@
   --light-gray-2: #CCCCCC;
   --light-gray-3: #F5F5F5;
   --white: #FFFFFF;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+
+  &:hover {
+    background-color: var(--tertiary);
+  }
+}
+
+.btn-link {
+  color: var(--dark-gray-2);
+  text-decoration: underline;
 }
