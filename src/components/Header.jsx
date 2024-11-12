@@ -1,6 +1,9 @@
+//imagem logo do topo da pagina
 import Logo from './Logo'
-//exportar imagem de carrinho
+//imagem de carrinho
 import MiniCart from '../assets/mini-cart.svg'
+//navegação principal
+import Nav from './Nav';
 
 const Header = () => {
     return (
@@ -24,6 +27,10 @@ const Header = () => {
                     <img src={MiniCart} alt="icone carrinho de compras" />
                 </div>
                 
+            </div>
+
+            <div>
+                <Nav />
             </div>
 
         </header>
