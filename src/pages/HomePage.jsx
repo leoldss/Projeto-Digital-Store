@@ -1,7 +1,7 @@
-import Section from "../components/Section";
+import ProductCard from "../components/ProductCard";
 
 const HomePage = () => {
-    const teste = {'text':'titulo teste','href':'#'};
+    
     return ( 
         <>
             
