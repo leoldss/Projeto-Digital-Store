@@ -1,14 +1,14 @@
 
-//imagem : recebe caminho para a imagem : str
+//image : recebe caminho para a imagem : str
 //name : recebe titulo da imagem : str
 //price : preço : float
 //(opcional)priceDiscount : se tiver desconto corta o preço original e mostra este novo : float
-const ProductCard = ({ imagem, name, price, PriceDiscount }) => {
+const ProductCard = ({ image, name, price, PriceDiscount }) => {
 
     return (
         <div className="d-inline-flex flex-column p-2">
 
-            <img src={imagem} alt="imagem do card" style={{width:'292px',height:'321px'}} />
+            <img src={image} alt="imagem do card" style={{width:'292px',height:'321px'}} />
             <h3>{name}</h3>
 
             <div className="d-flex flex-row justify-content-between p-2">
