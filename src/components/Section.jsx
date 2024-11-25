@@ -6,13 +6,13 @@
 //children: todos os elementos filhos da tag
 const Section = ({title, titleAlign = "left", link, children }) => {
 
-    const tituloDirecao = titleAlign === "left" ? "justify-content-start" : "justify-content-end";
+    const tituloDirecao = titleAlign === "left" ? "justify-content-start" : "justify-content-center";
 
     return (
-        <section className="m-3">
-            <div className={`d-flex flex-row w-100`}>
+        <section className="mx-4 p-3">
+            <div className={`d-flex flex-column`}>
                 {/* titulo */}
-                <div className={`w-50 d-flex ${tituloDirecao}`}>
+                <div className={`d-flex ${tituloDirecao}`}>
                     <h2 style={{ color: 'var(--dark-gray-2) ', fontSize: '24px' }}>
                         {title}
                     </h2>

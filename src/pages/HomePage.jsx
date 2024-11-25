@@ -9,19 +9,28 @@ import slide7 from '../assets/img/home-slide-7.jpeg';
 import slide8 from '../assets/img/home-slide-8.jpeg';
 
 //imagens de coleção
-import colecao1 from '../assets/img/collection-1.png'
-import colecao2 from '../assets/img/collection-2.png'
-import colecao3 from '../assets/img/collection-3.png'
+import colecao1 from '../assets/img/collection-1.png';
+import colecao2 from '../assets/img/collection-2.png';
+import colecao3 from '../assets/img/collection-3.png';
 
+//IMAGENS PRODUTOS
+import productThumb1 from '../assets/img/product-thumb-1.jpeg';
+import productThumb2 from '../assets/img/product-thumb-2.jpeg';
+import productThumb3 from '../assets/img/product-thumb-3.jpeg';
+import productThumb4 from '../assets/img/product-thumb-4.jpeg';
+import productThumb5 from '../assets/img/product-thumb-5.jpeg';
 
+//COMPONENTS
 import Gallery from "../components/Gallery";
 import Section from "../components/Section";
- 
+import ProductListing from '../components/ProductListing';
+
 const HomePage = () => {
 
+    {/* ---------- IMAGENS ---------- */ }
     const imagens = [
         { "id": "0", "src": slide1 },
-        { "id": "1", "src": slide2},
+        { "id": "1", "src": slide2 },
         { "id": "2", "src": slide3 },
         { "id": "3", "src": slide4 },
         { "id": "4", "src": slide5 },
@@ -31,20 +40,70 @@ const HomePage = () => {
     ]
 
     const imgColecao = [
-        {"id":"0","src":colecao1},
-        {"id":"1","src":colecao2},
-        {"id":"2","src":colecao3}
+        { "id": "0", "src": colecao1 },
+        { "id": "1", "src": colecao2 },
+        { "id": "2", "src": colecao3 }
     ]
 
-    return (
-        <>
-            <Gallery width={"1440px"} height={"681px"} images={imagens}/>
+    const imagemProdutos = [
+        {
+            name: "Nome do produto",
+            image: productThumb1,
+            price: 200,
+            priceDiscount: 149.9
+        },
+        {
+            name: "Nome do produto",
+            image: productThumb2,
+            price: 49.9
+        }, {
+            name: "Nome do produto",
+            image: productThumb3,
+            price: 200,
+            priceDiscount: 149.9
+        },
+        {
+            name: "Nome do produto",
+            image: productThumb4,
+            price: 49.9
+        }, {
+            name: "Nome do produto",
+            image: productThumb5,
+            price: 200,
+            priceDiscount: 149.9
+        },
+        {
+            name: "Nome do produto",
+            image: productThumb1,
+            price: 49.9
+        }, {
+            name: "Nome do produto",
+            image: productThumb2,
+            price: 200,
+            priceDiscount: 149.9
+        },
+        {
+            name: "Nome do produto",
+            image: productThumb3,
+            price: 49.9
+        }
+    ];
+    {/* ---------- X ---------- */ }
 
-            {/* sessao de coleção de imagens */}
-            <Section title={"Coleções em Destaque"} titleAlign={'left'} children={imgColecao.map(
-                (imagem)=>(<img key={imagem.id} src={imagem.src} alt='imagem coleção' />)
-            )}/>
-        </>
+    return (
+        <main>
+            <Gallery width={"1440px"} height={"681px"} images={imagens} />
+
+            <div style={{backgroundColor:"#F9F6FE"}}>
+                {/* sessão de coleção de imagens */}
+                <Section title={"Coleções em Destaque"} titleAlign={'center'} children={imgColecao.map(
+                    (imagem) => (<img key={imagem.id} src={imagem.src} alt='imagem coleção' />)
+                )} />
+
+                {/* Cards com produtos em alta */}
+                <Section title={'Produtos em Alta'} titleAlign='left' children={<ProductListing products={imagemProdutos} />} />
+            </div>
+        </main>
     );
 }
 
