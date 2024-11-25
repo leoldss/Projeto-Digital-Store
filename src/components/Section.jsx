@@ -1,14 +1,16 @@
+//classTitle & classContent: estilos para a caixa de titulo e de conteudos children
+
 //title: recebe uma string
 //titleAlign: recebe 'left' ou 'center', left é valor padrão
 //link: recebe objeto , no moldelo: {'text': 'x', 'href':'x'}
 //children: todos os elementos filhos da tag
-const Section = ({ title, titleAlign = "left", link, children }) => {
+const Section = ({title, titleAlign = "left", link, children }) => {
 
     const tituloDirecao = titleAlign === "left" ? "justify-content-start" : "justify-content-end";
 
     return (
-        <section >
-            <div className={"d-flex flex-row w-100"}>
+        <section className="m-3">
+            <div className={`d-flex flex-row w-100`}>
                 {/* titulo */}
                 <div className={`w-50 d-flex ${tituloDirecao}`}>
                     <h2 style={{ color: 'var(--dark-gray-2) ', fontSize: '24px' }}>
@@ -21,7 +23,7 @@ const Section = ({ title, titleAlign = "left", link, children }) => {
                 </div>
 
             </div>
-            <div className="section-content">
+            <div className={`section-content d-flex gap-3 m-2 `}>
                 {children}
             </div>
         </section>
