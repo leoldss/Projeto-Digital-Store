@@ -7,19 +7,25 @@
     {"text": "Options 3", "value": "opt3"}
     {"text": "Options 4"}
   ]*/
-const FilterGroup = ({title,inputType,options}) => {
+const FilterGroup = ({ title, inputType, options }) => {
 
-    return ( 
-        <>
-            <h3>{title}</h3>
-            {options.map((opcao)=>(
-                <div>
-                    <label key={opcao.id} htmlFor={opcao.id}>{opcao.text}</label>
-                    <input type={inputType} id={opcao.id} name={inputType == 'radio'? 'opcao' : opcao.value} value={opcao.value}/>
-                </div>
-            ))}
-        </>
-     );
+    return (
+        <div className="d-flex flex-column gap-1">
+
+            <h3 style={{ color: "var(--dark-gray-2)", fontSize: "14px" }}>{title}</h3>
+
+            <div>
+                {options.map((opcao) => (
+                    <div className="d-flex align-items-center gap-2 my-1">
+                        <input type={inputType} id={opcao.id} name={inputType == 'radio' ? 'opcao' : opcao.value} value={opcao.text} style={{ width: "22px", height: "22px" }} />
+                        <label key={opcao.id} htmlFor={opcao.id} >{opcao.text}</label>
+                    </div>
+                ))}
+            </div>
+
+
+        </div>
+    );
 }
- 
+
 export default FilterGroup;
