@@ -28,7 +28,7 @@ const estado = [
 
 const FilterComponent = ({}) => {
     return ( 
-        <aside className="p-4" style={{backgroundColor:"var(--white)",width:"308px",border:"2px solid #000000"}}>
+        <aside className="p-4" style={{backgroundColor:"var(--white)",width:"308px"}}>
 
             <h2 style={{fontSize:"16px",color:"var(--dark-gray-2)"}}>Filtrar por</h2>
             <hr style={{color:"var(--light-gray-2)"}}/>

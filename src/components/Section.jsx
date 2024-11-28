@@ -9,11 +9,11 @@ const Section = ({title, titleAlign = "left", link, children }) => {
     const tituloDirecao = titleAlign === "left" ? "justify-content-start" : "justify-content-center";
 
     return (
-        <section className="mx-4 p-3">
+        <section className="mx-2 p-2">
             <div className={`d-flex flex-column`}>
                 {/* titulo */}
                 <div className={`d-flex ${tituloDirecao}`}>
-                    <h2 style={{ color: 'var(--dark-gray-2) ', fontSize: '24px' }}>
+                    <h2 style={{ color: 'var(--dark-gray-2) ', fontSize: '18px', fontWeight: "bold"}}>
                         {title}
                     </h2>
                 </div>
