@@ -25,6 +25,9 @@ import Gallery from "../components/Gallery";
 import Section from "../components/Section";
 import ProductListing from '../components/ProductListing';
 
+//imagem unica coleções em destaque
+import colecoes from "../assets/img/colecoes_em_destaque.png"
+
 const HomePage = () => {
 
     {/* ---------- IMAGENS ---------- */ }
@@ -91,14 +94,17 @@ const HomePage = () => {
     {/* ---------- X ---------- */ }
 
     return (
-        <main>
-            <Gallery width={"1440px"} height={"681px"} images={imagens} />
+        <main style={{backgroundColor:"#F9F6FE"}}>
+            <Gallery width={"w-100"} images={imagens} menuOption={true} />
 
-            <div style={{backgroundColor:"#F9F6FE"}}>
+            <div>
                 {/* sessão de coleção de imagens */}
                 <Section title={"Coleções em Destaque"} titleAlign={'center'} children={imgColecao.map(
                     (imagem) => (<img key={imagem.id} src={imagem.src} alt='imagem coleção' />)
                 )} />
+
+                <Section title={"Coleções em Destaque"} titleAlign='center' children={<img className='img-fluid d-block mx-auto' src={colecoes} alt='icones de coleções'/>}/>
+
 
                 {/* Cards com produtos em alta */}
                 <Section title={'Produtos em Alta'} titleAlign='left' children={<ProductListing products={imagemProdutos} />} />

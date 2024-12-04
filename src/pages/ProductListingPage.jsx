@@ -94,7 +94,7 @@ const ProductListingPage = () => {
     return (
 
         <div style={{ backgroundColor: "#F9F8FE" }} className="p-2">
-            <section className="m-4">
+            <section className="m-2">
                 <label htmlFor="selecao-filtragem">Ordenar por: </label>
                 <select id="selecao-filtragem" className="form-select" aria-label="Default select example" style={{ width: '308px', height: "60px" }}>
                     <option value="1">Menor preço</option>
@@ -102,7 +102,7 @@ const ProductListingPage = () => {
                 </select>
             </section>
 
-            <section className="m-4 d-flex flex-row">
+            <section className="my-2 mx-0 d-flex flex-row">
 
                 {/* CAMPO DE FILTRO */}
                 <div>

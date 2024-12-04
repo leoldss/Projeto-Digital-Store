@@ -9,7 +9,7 @@ const ProductCard = ({ image, name, price, PriceDiscount }) => {
         <div className="d-inline-flex flex-column p-2">
 
             <img src={image} alt="imagem do card" style={{width:'292px',height:'321px'}} />
-            <h3>{name}</h3>
+            <h3 style={{fontSize:'24px',color:"var(--dark-gray-2)"}}>{name}</h3>
 
             <div className="d-flex flex-row justify-content-between p-2">
                 {/* valor price - ESTILIZAÇÃO NO APP.CSS */}
