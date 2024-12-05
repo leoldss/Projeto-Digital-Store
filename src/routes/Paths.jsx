@@ -10,7 +10,7 @@ const Paths = () => {
         <>
             <BrowserRouter >
                 <Routes>
-                    <Route path='/Projeto-Digital-Store' element={<Layout />}>
+                    <Route path='/' element={<Layout />}>
                         <Route index element={<HomePage />} />
                         <Route path='/produto-lista' element={<ProductListingPage />} />
                         <Route path='/produto-pagina' element={<ProductViewPage />} />
