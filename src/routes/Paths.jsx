@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter,HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from '../pages/Layout';
 import HomePage from '../pages/HomePage';
 import ProductListingPage from '../pages/ProductListingPage';
@@ -8,7 +8,7 @@ import Category from '../pages/Category';
 const Paths = () => {
     return (
         <>
-            <BrowserRouter >
+            <HashRouter >
                 <Routes>
                     <Route path='/' element={<Layout />}>
                         <Route index element={<HomePage />} />
@@ -17,7 +17,7 @@ const Paths = () => {
                         <Route path='/categoria' element={<Category />} />
                     </Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </>
     );
 }
